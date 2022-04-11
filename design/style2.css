@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.contain{
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    position: absolute;
+    background-color: white;
+}
+.contain::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    border-bottom: 100px solid white;
+    border-left: 100px solid transparent;
+}
+.underline{
+    width: 100px;
+    height: 10px;
+    background-color: red;
+}
+.text{
+    color: white;
+    transform: translateY(10%);
+    z-index: 2;
+}

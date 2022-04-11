@@ -1,0 +1,458 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: 'Fraunces', "barlow", serif;
+}
+
+.header{
+    flex-basis: 100%;
+    padding: 3em 1em;
+    position: relative;
+    background: url("images/mobile/image-header.jpg") no-repeat 68% 0%;
+    background-size: cover;
+}
+
+.logo-burger{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+}
+.logo{
+    display: inline-flex;
+    flex-basis: 50%;
+}
+
+.logo-img{
+    width: 100%;
+}
+.burger:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+
+.head{
+    font-family: 'Fraunces';
+    color: white;
+    margin-top: 3em;
+    font-size: 2.125em;
+    letter-spacing: 0.376em;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.arrow-down{
+    display: block;
+    margin: 5em auto;
+    transform: translateY(-11%);
+}
+
+.dropdown{
+    display: none;
+}
+.dropdown-active{
+    margin: 4em auto;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    background-color: white;
+    padding: 2.4em;
+    position: absolute;
+    z-index: 3;
+    width: 91%;
+    top: 5em;
+}
+.dropdown-active::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -2em;
+    right: 0;
+    border-bottom: 2em solid white;
+    border-left: 2em solid transparent
+}
+.dropdown-link{
+    margin-bottom: 2.2em;
+    text-decoration: none;
+    color: black;
+    opacity: .5;
+    font-family: barlow;
+    font-size: 1em;
+    font-weight: 600;
+}
+.dropdown-link:hover{
+    opacity: 1;
+}
+.btn{
+    width: 50%;
+    margin: auto;
+    border: none;
+    padding: .8em;
+    border-radius: 1.5em;
+    font-family: fraunces;
+    font-size: 1.1em;
+    background-color: #fdd501;
+}
+.transform,
+.standout{
+    text-align: center;
+}
+
+.egg,
+.standout-img{
+    width: 100%;
+}
+
+.content{
+    padding: 4em 1em;
+}
+
+.transform-head,
+.standout-head{
+    font-family: fraunces;
+    font-size: 2.1em;
+    margin-bottom: 1em;
+}
+
+.transform-text{
+    font-family: Barlow;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    margin-bottom: 2em;
+}
+
+.graphic,
+.photography{
+    position: relative;
+    width: 100%;
+    flex-basis: 600px;
+}
+.graphic{
+    background: url("images/mobile/image-graphic-design.jpg") no-repeat;
+    background-size: contain;
+}
+.photography{
+    background: url("images/mobile/image-photography.jpg") no-repeat;
+    background-size: contain;
+}
+.graphic-content,
+.photography-content{
+    position: absolute;
+    bottom: 0;
+}
+
+.graphic-head,
+.photography-head{
+    font-family: "fraunces";
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+}
+
+.graphic-head{
+    color: hsl(167, 40%, 24%);
+}
+
+.photography-head{
+    color: hsl(198, 62%, 26%);
+}
+
+.graphic-text,
+.photography-text{
+    font-family: barlow;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 0 1em 3.5em;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.graphic-text{
+    color: hsl(167, 40%, 24%);
+}
+.photography-text{
+    color: hsl(198, 62%, 26%);
+}
+.text-box{
+    display: inline-block;
+    width: 37%;
+    text-align: center;
+}
+.text-box:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+.text{
+    transform: translateY(66%);
+    font-weight: 700;
+    z-index: 2;
+    position: relative;
+}
+
+.transform-box{
+    height: 10px;
+    border-radius: 10px;
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+}
+.trans-box{
+    background-color: hsl(51, 100%, 49%);
+    opacity: .5;
+}
+.standout-box{
+    background-color: hsl(7, 99%, 70%);
+}
+
+.testimonials{
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonial-head{
+    font-family: fraunces;
+    opacity: .5;
+    margin-top: 3em;
+    font-size: 1em;
+    letter-spacing: .25em;
+}
+
+.emily-img,
+.thomas-img,
+.jennie-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 5em 0 2.5em;
+}
+
+.emily-text,
+.thomas-text,
+.jennie-text{
+    padding: 0 1em;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    font-family: barlow;
+    font-weight: 600;
+    opacity: .5;
+    margin-bottom: 2em;
+}
+.post{
+    display: block;
+    text-align: center;
+    margin-top: .5em;
+    opacity: .3;
+    font-family: barlow;
+    font-size: .8em;
+}
+.variety{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    gap: 0;
+    margin-top: 5em;
+}
+.vary{
+    flex-basis: 50%;
+}
+.vary-img{
+    width: 100%;
+    height: 100%;
+}
+.footer{
+    background-color: #90d4c5;
+    padding: 3em 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+.footer-logo{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 3em;
+}
+.links{
+    color: #418576;
+    margin-bottom: 5em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.eachlink{
+    text-decoration: none;
+    color: #418576;
+}
+.eachlink:hover{
+    cursor: pointer;
+    color: #2d7464;
+    font-size: 1.08em;
+    transition: font-size 100ms ease;
+}
+.social-logo{
+    margin-bottom: 5em;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a {
+    font-family: barlow;
+    font-size: 1em;
+    letter-spacing: 0.104em;
+    font-weight: 700;
+    color: #2c7363; 
+    text-decoration: none;
+}
+
+@media (min-width: 800px) {
+    .body{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .header{
+        padding: 4.5em 3em 15em;
+        background: url("images/desktop/image-header.jpg") no-repeat 0% 0%;
+        background-size: cover;
+    }
+    .logo{
+        flex-basis: 20%;
+    }
+    .burger{
+        display: none;
+    }
+    .dropdown{
+        width: 40%;
+        display: inline-flex;
+        flex-flow: row wrap;
+        flex-basis: 40%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .dropdown-link,
+    .btn{
+        margin: 0;
+        color: white;
+        opacity: 1;
+    }
+    .dropdown-link{
+        display: inline-block;
+        padding: 2em;
+    }
+    .btn:hover{
+        background-color: rgba(255, 255, 255, 0.637);
+        
+    }
+    .dropdown-link:hover{
+        color: orange;
+    }
+    .btn{
+        color: black;
+        background-color: white;
+        width: auto;
+        padding: 1em 1.5em;
+    }
+    .head{
+        margin-top: 1.2em;
+        font-size: 5em;
+        font-weight: 900;
+        letter-spacing: .2em;
+        font-family: "Fraunces";
+    }
+    .transform,
+    .standout{
+        display: flex;
+    }
+    .egg{
+        order: 2;
+        flex-basis: 50%;
+    }
+    .standout-img{
+        flex-basis: 50%;
+    }
+    .standout-content{
+        order: 2;
+        flex-basis: 50%;
+    }
+    .content{
+        order: 1;
+        flex-basis: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: left;
+        align-items: flex-start;
+        text-align: left;
+        padding: 10em;
+    }
+    .transform-head{
+        font-size: 2.7em;
+    }
+    .transform-text{
+        font-size: 1.1em;
+        opacity: .5;
+    }
+    .graphic{
+        background: url("images/desktop/image-graphic-design.jpg") no-repeat;
+        background-size: cover;
+    }
+    .photography{
+        background: url("images/desktop/image-photography.jpg") no-repeat;
+        background-size: cover;
+    }
+    .graphic,
+    .photography{
+        flex-basis: 50%;
+        display: flex;
+        height: 600px;
+        text-align: center;
+    }
+    .graphic-text,
+    .photography-text{
+        width: 50%;
+        margin: auto;
+        line-height: 1.7em;
+    }
+    .testimonial-contain{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .testimonial-head{
+        flex-basis: 100%;
+    }
+    .vary{
+        flex-basis: 25%;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer-logo{
+        width: 15%;
+    }
+    .links{
+        width: 20%;
+        margin: 0 auto 6em;
+    }
+}
